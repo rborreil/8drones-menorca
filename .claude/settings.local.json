@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.8drones-menorca.com)",
+      "PowerShell(npm install *)",
+      "PowerShell(npm run *)",
+      "WebSearch",
+      "WebFetch(domain:www.pexels.com)",
+      "PowerShell(Get-ChildItem \"C:\\\\Dev\\\\Projets\\\\Perso\\\\2026\\\\15_8drones\\\\public\\\\images\",\"C:\\\\Dev\\\\Projets\\\\Perso\\\\2026\\\\15_8drones\\\\public\\\\video\" | Select-Object Name, @{N='KB';E={[math]::Round\\($_.Length/1KB\\)}} | Format-Table -AutoSize)"
+    ]
+  }
+}
