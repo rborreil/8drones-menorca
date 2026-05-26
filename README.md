@@ -30,14 +30,21 @@ src/
 tailwind.config.js → palette (ink/sand/sea/gold), typographies, design tokens
 ```
 
+## Médias
+
+Le site est habillé avec des **visuels stock libres de droits (Pexels — usage libre, sans attribution)** servant de placeholders premium :
+
+- `public/video/hero.mp4` (960×540, ~4 Mo) + `hero-mobile.mp4` (640×360, ~1,5 Mo) — vidéo de fond du hero.
+- `public/images/*.jpg` — 8 photos aériennes (côte, villas, resorts).
+
+> ⚠️ À **remplacer par les vraies réalisations du client** (photos + showreel) avant mise en ligne. Les fichiers conservent les mêmes noms → remplacement direct, aucun changement de code requis.
+
 ## À personnaliser avant mise en ligne
 
-- [ ] Remplacer les **dégradés placeholder** (hero, services, portfolio) par les vraies photos/vidéos.
-- [ ] Ajouter un **showreel** vidéo dans la section Work.
+- [ ] Remplacer les visuels stock par les **réalisations réelles** du client (mêmes noms de fichiers).
 - [ ] Connecter le **formulaire** : remplacer `action="https://formspree.io/f/your-id"` par un vrai endpoint (Formspree, Netlify Forms, ou backend).
 - [ ] Vérifier/confirmer les mentions de **réassurance** (licence AESA, assurance, délais) — ne pas afficher de garanties non réelles.
-- [ ] Renseigner l'URL réelle dans les balises `canonical` / Open Graph et ajouter une image `og.jpg`.
-- [ ] Ajouter `favicon`, `robots.txt`, `sitemap.xml`.
+- [x] `favicon.svg`, `robots.txt`, `sitemap.xml`, Open Graph + image — en place dans `public/`.
 
 ## Évolutions prévues (plan)
 
