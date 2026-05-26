@@ -5,6 +5,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* hauteur du header fixe (h-20 = 80px) */
   }
 
   body {
@@ -12,7 +13,28 @@
   }
 
   h1, h2, h3 {
-    @apply font-display;
+    @apply font-display tracking-tight;
+  }
+
+  /* Couleur de selection de texte */
+  ::selection {
+    background-color: #1f9a8f;
+    color: #fff;
+  }
+
+  /* Focus clavier net (les boutons .btn gardent leur ring) */
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid #1f9a8f;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Scrollbar discrete */
+  @supports (scrollbar-color: auto) {
+    html {
+      scrollbar-color: #1b2730 #f4efe6;
+    }
   }
 }
 
@@ -44,10 +66,50 @@
     @apply text-xs font-semibold uppercase tracking-widest2 text-sea;
   }
 
+  /* Menu mobile : se deroule de haut en bas (effet accordeon) + fondu */
+  .mobile-nav {
+    @apply absolute inset-x-0 top-full grid opacity-0 pointer-events-none;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-out, opacity 0.25s ease-out;
+  }
+  .mobile-nav.is-open {
+    @apply opacity-100 pointer-events-auto;
+    grid-template-rows: 1fr;
+  }
+  /* l'enfant doit pouvoir etre ecrase pour que le deroule fonctionne */
+  .mobile-nav > nav {
+    @apply min-h-0 overflow-hidden;
+  }
+
+  /* Voile derriere le menu mobile ouvert (assombrit + floute le fond) */
+  .nav-overlay {
+    @apply fixed inset-0 z-40 bg-ink/70 backdrop-blur-sm opacity-0 pointer-events-none
+           transition-opacity duration-200;
+  }
+  .nav-overlay.is-open {
+    @apply opacity-100 pointer-events-auto;
+  }
+
   /* Carte service */
   .service-card {
     @apply relative overflow-hidden rounded-2xl bg-ink text-sand
            ring-1 ring-white/5 transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  /* Lightbox (showreel + photos portfolio) */
+  .lightbox {
+    @apply fixed inset-0 z-[60] hidden items-center justify-center bg-ink/95 p-4 backdrop-blur-sm;
+  }
+  .lightbox.is-open {
+    @apply flex;
+  }
+  .lightbox img,
+  .lightbox video {
+    @apply max-h-[88vh] max-w-5xl rounded-lg shadow-2xl;
+  }
+  .lightbox-close {
+    @apply absolute right-4 top-4 flex h-11 w-11 items-center justify-center
+           rounded-full bg-white/10 text-sand transition hover:bg-white/20;
   }
 }
 
@@ -55,11 +117,29 @@
 @media (prefers-reduced-motion: no-preference) {
   .reveal {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease-out, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .reveal.is-visible {
     opacity: 1;
     transform: none;
   }
+
+  /* Menu mobile : apparition en cascade des elements (effet premium) */
+  .mobile-nav > nav > * {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+  }
+  .mobile-nav.is-open > nav > * {
+    opacity: 1;
+    transform: none;
+  }
+  .mobile-nav.is-open > nav > *:nth-child(1) { transition-delay: 0.08s; }
+  .mobile-nav.is-open > nav > *:nth-child(2) { transition-delay: 0.14s; }
+  .mobile-nav.is-open > nav > *:nth-child(3) { transition-delay: 0.20s; }
+  .mobile-nav.is-open > nav > *:nth-child(4) { transition-delay: 0.26s; }
+  .mobile-nav.is-open > nav > *:nth-child(5) { transition-delay: 0.32s; }
+  .mobile-nav.is-open > nav > *:nth-child(6) { transition-delay: 0.38s; }
+  .mobile-nav.is-open > nav > *:nth-child(7) { transition-delay: 0.44s; }
 }

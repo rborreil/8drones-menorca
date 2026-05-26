@@ -6,9 +6,12 @@
   "nav": {
     "services": "Services",
     "work": "Réalisations",
+    "about": "À propos",
     "why": "Pourquoi nous",
     "process": "Méthode",
-    "cta": "Demander un devis"
+    "cta": "Demander un devis",
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu"
   },
   "hero": {
     "eyebrow": "Images aériennes · Minorque",
@@ -18,7 +21,8 @@
     "ctaSecondary": "Voir nos réalisations",
     "trust1": "Pilotes certifiés et assurés",
     "trust2": "Images 4K cinématographiques",
-    "trust3": "Livraison rapide"
+    "trust3": "Livraison rapide",
+    "showreel": "Voir le showreel"
   },
   "services": {
     "eyebrow": "Ce que nous faisons",
@@ -109,6 +113,40 @@
         "Autre"
       ]
     }
+  },
+  "about": {
+    "eyebrow": "À propos",
+    "title": "Arnaud, votre pilote de drone à Minorque.",
+    "p1": "8 Drones Menorca, c'est Arnaud — pilote de drone certifié, basé sur l'île. De l'immobilier aux hôtels, en passant par les mariages, les événements et les séjours, il capture Minorque avec un regard cinématographique et une approche personnelle et impliquée.",
+    "p2": "Chaque projet est préparé, filmé, monté et livré avec soin — prêt à publier. Communication claire, délais courts, et des images dont vous serez fier.",
+    "points": [
+      "Pilote certifié et assuré",
+      "Basé à Minorque",
+      "Disponible sur toute l'île et au-delà"
+    ]
+  },
+  "stats": {
+    "items": [
+      { "value": "20+", "label": "Projets aériens réalisés" },
+      { "value": "24h", "label": "Délai de livraison habituel" },
+      { "value": "100%", "label": "Certifié & assuré" },
+      { "value": "4K", "label": "Images qualité cinéma" }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Témoignages",
+    "title": "Ce que disent nos clients.",
+    "items": [
+      { "quote": "Un service absolument impeccable et professionnel. Nous avons fait filmer trois maisons et le résultat a dépassé nos attentes : qualité d'image époustouflante, montage dynamique et moderne. Arnaud est un pilote certifié qui sait mettre en valeur chaque propriété.", "name": "Escapada Menorca Conciergerie", "role": "Conciergerie immobilière · Minorque" },
+      { "quote": "Nous avons fait appel à 8 Drones Menorca pour immortaliser notre mariage : la prestation a dépassé nos attentes. Images et vidéos d'une super qualité, et Arnaud est très agréable, à l'écoute et arrangeant. Nous recommandons vivement !", "name": "Mathieu Gregori", "role": "Mariage · Minorque" },
+      { "quote": "Un travail remarquable ! Grâce aux prises de vue par drone, nos vacances à Minorque ont été sublimées. Le rendu est dynamique, élégant et très émouvant — digne d'un film professionnel. Une prestation haut de gamme.", "name": "Karim Snider", "role": "Séjour à Minorque" }
+    ]
+  },
+  "clients": {
+    "title": "La confiance des professionnels de toute Minorque"
+  },
+  "common": {
+    "close": "Fermer"
   },
   "footer": {
     "tagline": "Photo et vidéo aérienne · Minorque, Espagne",

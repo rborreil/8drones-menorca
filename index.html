@@ -9,6 +9,7 @@
     <meta name="description" content="Professional drone photography and video in Menorca for real estate, hotels, villas, weddings and events. Licensed pilots, cinematic 4K footage, fast delivery." />
     <link rel="canonical" href="https://www.8drones-menorca.com/" />
     <meta name="theme-color" content="#0d1418" />
+    <meta name="robots" content="noindex, nofollow" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <!-- Versions linguistiques -->
@@ -73,6 +74,7 @@
         <nav class="hidden items-center gap-8 lg:flex" aria-label="Main">
           <a href="#services" class="text-sm font-medium text-sand/80 hover:text-sand">Services</a>
           <a href="#work" class="text-sm font-medium text-sand/80 hover:text-sand">Work</a>
+          <a href="#about" class="text-sm font-medium text-sand/80 hover:text-sand">About</a>
           <a href="#why" class="text-sm font-medium text-sand/80 hover:text-sand">Why us</a>
           <a href="#process" class="text-sm font-medium text-sand/80 hover:text-sand">Process</a>
           <div class="flex items-center gap-3 border-l border-white/15 pl-5">
@@ -88,22 +90,32 @@
         <button
           data-nav-toggle
           aria-expanded="false"
+          aria-controls="mobile-nav"
           aria-label="Open menu"
-          class="text-sand lg:hidden"
+          data-label-open="Open menu"
+          data-label-close="Close menu"
+          class="-mr-2 inline-flex h-11 w-11 items-center justify-center text-sand lg:hidden"
         >
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <!-- Icone ouvrir (burger) -->
+          <svg data-icon-open width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="7" x2="21" y2="7" />
             <line x1="3" y1="12" x2="21" y2="12" />
             <line x1="3" y1="17" x2="21" y2="17" />
+          </svg>
+          <!-- Icone fermer (croix) -->
+          <svg data-icon-close class="hidden" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="5" x2="19" y2="19" />
+            <line x1="19" y1="5" x2="5" y2="19" />
           </svg>
         </button>
       </div>
 
       <!-- Nav mobile -->
-      <div data-mobile-nav class="hidden border-t border-white/10 bg-ink lg:hidden">
+      <div id="mobile-nav" data-mobile-nav class="mobile-nav border-t border-white/10 bg-ink shadow-xl lg:hidden">
         <nav class="container-x flex flex-col gap-1 py-4" aria-label="Mobile">
           <a href="#services" class="rounded-lg px-3 py-3 text-sand/90 hover:bg-white/5">Services</a>
           <a href="#work" class="rounded-lg px-3 py-3 text-sand/90 hover:bg-white/5">Work</a>
+          <a href="#about" class="rounded-lg px-3 py-3 text-sand/90 hover:bg-white/5">About</a>
           <a href="#why" class="rounded-lg px-3 py-3 text-sand/90 hover:bg-white/5">Why us</a>
           <a href="#process" class="rounded-lg px-3 py-3 text-sand/90 hover:bg-white/5">Process</a>
           <div class="mt-2 flex items-center gap-3 border-t border-white/10 px-3 pt-4">
@@ -117,6 +129,9 @@
       </div>
     </header>
 
+    <!-- Voile derriere le menu mobile -->
+    <div data-nav-overlay class="nav-overlay lg:hidden" aria-hidden="true"></div>
+
     <main id="top">
       <!-- =================== HERO =================== -->
       <section
@@ -124,6 +139,7 @@
       >
         <!-- Video aerienne de fond (stock libre de droits - a remplacer par le showreel du client) -->
         <video
+          data-hero-video
           class="absolute inset-0 h-full w-full object-cover"
           autoplay
           muted
@@ -148,16 +164,21 @@
         <div class="container-x relative z-10 py-32">
           <div class="max-w-2xl animate-fade-up">
             <p class="eyebrow mb-5">Aerial visuals · Menorca</p>
-            <h1 class="text-balance text-4xl font-semibold leading-[1.05] text-sand sm:text-6xl">
+            <h1 class="text-balance text-5xl font-semibold leading-[1.02] tracking-tight text-sand sm:text-7xl">
               Menorca from above, in cinematic detail.
             </h1>
-            <p class="mt-6 max-w-xl text-lg leading-relaxed text-sand/70">
+            <p class="mt-6 max-w-xl text-lg leading-relaxed text-sand/70 sm:text-xl">
               Professional drone photography and video for <span class="text-sand">real estate, hotels, villas, weddings</span> and events across the island — shot, edited and delivered ready to publish.
             </p>
 
             <div class="mt-9 flex flex-col gap-3 sm:flex-row">
               <a href="#contact" class="btn-primary">Request a quote</a>
-              <a href="#work" class="btn-ghost">See our work</a>
+              <button type="button" data-showreel class="btn-ghost gap-2">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                Watch showreel
+              </button>
             </div>
 
             <!-- Bandeau reassurance (a confirmer avec le client) -->
@@ -174,6 +195,17 @@
             </ul>
           </div>
         </div>
+
+        <!-- Indicateur de scroll -->
+        <a
+          href="#services"
+          aria-label="Scroll"
+          class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-sand/50 transition hover:text-sand motion-safe:animate-bounce"
+        >
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </a>
       </section>
 
       <!-- =================== SERVICES =================== -->
@@ -306,22 +338,77 @@
             <a href="#contact" class="btn-primary self-start">Start your project</a>
           </div>
 
-          <!-- Grille portfolio (stock libre de droits - a remplacer par les realisations du client) -->
+          <!-- Grille portfolio cliquable (lightbox) - stock a remplacer par les realisations du client -->
           <div class="reveal mt-12 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
-            <img src="/images/coast-cliffs.jpg" alt="Drone photo of sea cliffs in Menorca" loading="lazy"
-              class="aspect-square w-full rounded-xl object-cover transition duration-500 hover:opacity-90" />
-            <img src="/images/villa-pool.jpg" alt="Aerial photo of a villa with pool in Menorca" loading="lazy"
-              class="aspect-square w-full rounded-xl object-cover transition duration-500 hover:opacity-90" />
-            <img src="/images/turquoise-coast.jpg" alt="Aerial view of turquoise coastline in Menorca" loading="lazy"
-              class="aspect-square w-full rounded-xl object-cover transition duration-500 hover:opacity-90" />
-            <img src="/images/palms.jpg" alt="Aerial photo of palm trees and grounds in Menorca" loading="lazy"
-              class="aspect-square w-full rounded-xl object-cover transition duration-500 hover:opacity-90" />
-            <img src="/images/resort-pools.jpg" alt="Aerial footage of a resort with pools in Menorca" loading="lazy"
-              class="col-span-2 aspect-[2/1] w-full rounded-xl object-cover transition duration-500 hover:opacity-90 lg:col-span-2" />
-            <img src="/images/beachfront-resort.jpg" alt="Aerial shot of a beachfront resort in Menorca" loading="lazy"
-              class="aspect-square w-full rounded-xl object-cover transition duration-500 hover:opacity-90" />
-            <img src="/images/resort-aerial.jpg" alt="Aerial view of a resort and grounds in Menorca" loading="lazy"
-              class="aspect-square w-full rounded-xl object-cover transition duration-500 hover:opacity-90" />
+            <button type="button" data-portfolio-img class="group relative aspect-square overflow-hidden rounded-xl">
+              <img src="/images/coast-cliffs.jpg" alt="Drone photo of sea cliffs in Menorca" loading="lazy"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+              <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent opacity-0 transition group-hover:opacity-100"></span>
+              <span class="pointer-events-none absolute inset-x-3 bottom-3 text-left text-xs text-sand opacity-0 transition group-hover:opacity-100">Drone photo of sea cliffs in Menorca</span>
+            </button>
+            <button type="button" data-portfolio-img class="group relative aspect-square overflow-hidden rounded-xl">
+              <img src="/images/villa-pool.jpg" alt="Aerial photo of a villa with pool in Menorca" loading="lazy"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+              <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent opacity-0 transition group-hover:opacity-100"></span>
+              <span class="pointer-events-none absolute inset-x-3 bottom-3 text-left text-xs text-sand opacity-0 transition group-hover:opacity-100">Aerial photo of a villa with pool in Menorca</span>
+            </button>
+            <button type="button" data-portfolio-img class="group relative aspect-square overflow-hidden rounded-xl">
+              <img src="/images/turquoise-coast.jpg" alt="Aerial view of turquoise coastline in Menorca" loading="lazy"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+              <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent opacity-0 transition group-hover:opacity-100"></span>
+              <span class="pointer-events-none absolute inset-x-3 bottom-3 text-left text-xs text-sand opacity-0 transition group-hover:opacity-100">Aerial view of turquoise coastline in Menorca</span>
+            </button>
+            <button type="button" data-portfolio-img class="group relative aspect-square overflow-hidden rounded-xl">
+              <img src="/images/palms.jpg" alt="Aerial photo of palm trees and grounds in Menorca" loading="lazy"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+              <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent opacity-0 transition group-hover:opacity-100"></span>
+              <span class="pointer-events-none absolute inset-x-3 bottom-3 text-left text-xs text-sand opacity-0 transition group-hover:opacity-100">Aerial photo of palm trees and grounds in Menorca</span>
+            </button>
+            <button type="button" data-portfolio-img class="group relative col-span-2 aspect-[2/1] overflow-hidden rounded-xl lg:col-span-2">
+              <img src="/images/resort-pools.jpg" alt="Aerial footage of a resort with pools in Menorca" loading="lazy"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+              <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent opacity-0 transition group-hover:opacity-100"></span>
+              <span class="pointer-events-none absolute inset-x-3 bottom-3 text-left text-xs text-sand opacity-0 transition group-hover:opacity-100">Aerial footage of a resort with pools in Menorca</span>
+            </button>
+            <button type="button" data-portfolio-img class="group relative aspect-square overflow-hidden rounded-xl">
+              <img src="/images/beachfront-resort.jpg" alt="Aerial shot of a beachfront resort in Menorca" loading="lazy"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+              <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent opacity-0 transition group-hover:opacity-100"></span>
+              <span class="pointer-events-none absolute inset-x-3 bottom-3 text-left text-xs text-sand opacity-0 transition group-hover:opacity-100">Aerial shot of a beachfront resort in Menorca</span>
+            </button>
+            <button type="button" data-portfolio-img class="group relative aspect-square overflow-hidden rounded-xl">
+              <img src="/images/resort-aerial.jpg" alt="Aerial view of a resort and grounds in Menorca" loading="lazy"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+              <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent opacity-0 transition group-hover:opacity-100"></span>
+              <span class="pointer-events-none absolute inset-x-3 bottom-3 text-left text-xs text-sand opacity-0 transition group-hover:opacity-100">Aerial view of a resort and grounds in Menorca</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================== A PROPOS =================== -->
+      <section id="about" class="bg-slate py-20 text-sand sm:py-28">
+        <div class="container-x grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <!-- Visuel : ideal = un portrait d'Arnaud ; en attendant, visuel aerien -->
+          <div class="reveal order-1">
+            <img
+              src="/images/turquoise-coast.jpg"
+              alt="Meet Arnaud, your drone pilot in Menorca."
+              loading="lazy"
+              class="aspect-[4/5] w-full rounded-2xl object-cover shadow-2xl"
+            />
+          </div>
+          <div class="reveal order-2">
+            <p class="eyebrow mb-3">About</p>
+            <h2 class="text-3xl font-semibold sm:text-4xl">Meet Arnaud, your drone pilot in Menorca.</h2>
+            <p class="mt-5 text-lg leading-relaxed text-sand/75">8 Drones Menorca is Arnaud — a certified drone pilot based on the island. From real estate and hotels to weddings, events and holidays, he captures Menorca with a cinematic eye and a personal, hands-on approach.</p>
+            <p class="mt-4 leading-relaxed text-sand/65">Every project is planned, filmed, edited and delivered with care — ready to publish. Clear communication, fast turnaround, and footage you'll be proud to share.</p>
+            <ul class="mt-6 space-y-2 text-sm text-sand/70">
+              <li class="flex items-center gap-2"><span class="text-sea">✓</span> Certified & insured pilot</li>
+              <li class="flex items-center gap-2"><span class="text-sea">✓</span> Based in Menorca</li>
+              <li class="flex items-center gap-2"><span class="text-sea">✓</span> Available across the island & beyond</li>
+            </ul>
+            <a href="#contact" class="btn-primary mt-8">Request a quote</a>
           </div>
         </div>
       </section>
@@ -356,6 +443,65 @@
               <p class="mt-1 text-sm text-muted">Professional gear and a sharp eye for content that performs.</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- =================== PREUVE SOCIALE (stats + temoignages + clients) =================== -->
+      <section id="trust" class="bg-sand pb-20 sm:pb-28">
+        <div class="container-x">
+          <!-- Stats (chiffres a confirmer / remplacer par les vrais) -->
+          <div class="reveal grid grid-cols-2 gap-8 border-y border-ink/10 py-12 sm:grid-cols-4">
+            <div class="text-center">
+              <div class="font-display text-4xl font-semibold text-sea sm:text-5xl">20+</div>
+              <div class="mt-1 text-sm text-muted">Aerial projects delivered</div>
+            </div>
+            <div class="text-center">
+              <div class="font-display text-4xl font-semibold text-sea sm:text-5xl">24h</div>
+              <div class="mt-1 text-sm text-muted">Typical delivery time</div>
+            </div>
+            <div class="text-center">
+              <div class="font-display text-4xl font-semibold text-sea sm:text-5xl">100%</div>
+              <div class="mt-1 text-sm text-muted">Licensed & insured</div>
+            </div>
+            <div class="text-center">
+              <div class="font-display text-4xl font-semibold text-sea sm:text-5xl">4K</div>
+              <div class="mt-1 text-sm text-muted">Cinema-grade footage</div>
+            </div>
+          </div>
+
+          <!-- Temoignages (placeholders a remplacer par de vrais avis) -->
+          <div class="reveal mt-16">
+            <p class="eyebrow mb-3">Testimonials</p>
+            <h2 class="text-3xl font-semibold sm:text-4xl">What our clients say.</h2>
+
+            <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+              <figure class="rounded-2xl bg-white p-6 shadow-xl shadow-ink/5">
+                <div class="text-gold" aria-hidden="true">★★★★★</div>
+                <blockquote class="mt-3 text-ink/80">“Absolutely flawless and professional. We had three properties filmed and the result exceeded our expectations — stunning image quality and modern, dynamic editing. Arnaud is a certified pilot who knows how to showcase every property.”</blockquote>
+                <figcaption class="mt-4 text-sm font-semibold">
+                  Escapada Menorca Conciergerie
+                  <span class="block font-normal text-muted">Property concierge · Menorca</span>
+                </figcaption>
+              </figure>
+              <figure class="rounded-2xl bg-white p-6 shadow-xl shadow-ink/5">
+                <div class="text-gold" aria-hidden="true">★★★★★</div>
+                <blockquote class="mt-3 text-ink/80">“We hired 8 Drones Menorca to capture our wedding and it exceeded our expectations. The photos and videos are superb, and Arnaud is a real pleasure to work with — attentive and accommodating. Highly recommended!”</blockquote>
+                <figcaption class="mt-4 text-sm font-semibold">
+                  Mathieu Gregori
+                  <span class="block font-normal text-muted">Wedding · Menorca</span>
+                </figcaption>
+              </figure>
+              <figure class="rounded-2xl bg-white p-6 shadow-xl shadow-ink/5">
+                <div class="text-gold" aria-hidden="true">★★★★★</div>
+                <blockquote class="mt-3 text-ink/80">“Remarkable work! The drone footage elevated our holiday in Menorca far beyond what we imagined — dynamic, elegant and genuinely moving, worthy of a professional film. A premium service.”</blockquote>
+                <figcaption class="mt-4 text-sm font-semibold">
+                  Karim Snider
+                  <span class="block font-normal text-muted">Holiday in Menorca</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -470,12 +616,25 @@
           <span class="font-display text-lg font-semibold text-sand">8 Drones Menorca</span>
           <p class="mt-1 text-sm">Aerial photography & video · Menorca, Spain</p>
         </div>
-        <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm" aria-label="Footer">
-          <a href="#services" class="hover:text-sand">Services</a>
-          <a href="#work" class="hover:text-sand">Work</a>
-          <a href="#contact" class="hover:text-sand">Contact</a>
-          <a href="#" class="hover:text-sand">Terms</a>
-        </nav>
+        <div class="flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-8">
+          <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm" aria-label="Footer">
+            <a href="#services" class="hover:text-sand">Services</a>
+            <a href="#work" class="hover:text-sand">Work</a>
+            <a href="#contact" class="hover:text-sand">Contact</a>
+            <a href="#" class="hover:text-sand">Terms</a>
+          </nav>
+          <div class="flex items-center gap-4">
+            <a href="https://www.instagram.com/8drones_menorca" target="_blank" rel="noopener" aria-label="Instagram" class="text-sand/70 transition hover:text-sand">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.86s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.86c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.5.01-4.74.07-.9.04-1.38.2-1.7.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.12.32-.28.8-.32 1.7C3.43 9.08 3.43 9.43 3.43 12s0 2.92.06 4.16c.04.9.2 1.38.32 1.7.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.12.8.28 1.7.32 1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c.9-.04 1.38-.2 1.7-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.12-.32.28-.8.32-1.7.06-1.24.07-1.59.07-4.16s-.01-2.92-.07-4.16c-.04-.9-.2-1.38-.32-1.7a2.86 2.86 0 00-.69-1.06 2.86 2.86 0 00-1.06-.69c-.32-.12-.8-.28-1.7-.32C15.5 4.01 15.15 4 12 4zm0 3.06A4.94 4.94 0 1012 16.94 4.94 4.94 0 0012 7.06zm0 8.14A3.2 3.2 0 1112 8.8a3.2 3.2 0 010 6.4zm5.14-8.34a1.15 1.15 0 11-2.3 0 1.15 1.15 0 012.3 0z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/61582054103904" target="_blank" rel="noopener" aria-label="Facebook" class="text-sand/70 transition hover:text-sand">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@8Drones-Menorca" target="_blank" rel="noopener" aria-label="YouTube" class="text-sand/70 transition hover:text-sand">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 00-2.11-2.12C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.39.53A3 3 0 00.5 6.2 31.3 31.3 0 000 12a31.3 31.3 0 00.5 5.8 3 3 0 002.11 2.12c1.89.53 9.39.53 9.39.53s7.5 0 9.39-.53A3 3 0 0023.5 17.8 31.3 31.3 0 0024 12a31.3 31.3 0 00-.5-5.8zM9.55 15.57V8.43L15.82 12z"/></svg>
+            </a>
+          </div>
+        </div>
       </div>
       <div class="container-x mt-8 border-t border-white/10 pt-6 text-xs text-sand/40">
         © <span data-year>2026</span> 8 Drones Menorca. All rights reserved.
@@ -492,6 +651,18 @@
         <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.01c-.24.68-1.42 1.3-1.95 1.34-.5.04-1.13.2-3.8-.79-3.2-1.26-5.24-4.5-5.4-4.71-.16-.21-1.3-1.73-1.3-3.3s.82-2.34 1.11-2.66c.29-.32.63-.4.84-.4.21 0 .42 0 .6.01.19.01.45-.07.7.54.24.61.84 2.1.91 2.25.07.16.12.34.02.55-.1.21-.15.34-.29.52-.15.18-.31.4-.44.54-.15.16-.3.33-.13.63.16.31.73 1.2 1.56 1.94 1.07.96 1.97 1.25 2.28 1.39.31.15.49.13.67-.08.18-.21.78-.91.99-1.22.21-.31.41-.26.7-.16.29.11 1.84.87 2.16 1.03.31.16.52.23.6.36.07.13.07.75-.17 1.43z"/>
       </svg>
     </a>
+
+    <!-- Lightbox : showreel video + photos du portfolio -->
+    <div data-lightbox class="lightbox" aria-hidden="true">
+      <button data-lightbox-close type="button" aria-label="Close" class="lightbox-close">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="5" x2="19" y2="19" />
+          <line x1="19" y1="5" x2="5" y2="19" />
+        </svg>
+      </button>
+      <img data-lightbox-img class="hidden" alt="" />
+      <video data-lightbox-video class="hidden" controls playsinline></video>
+    </div>
 
     <script type="module" src="/src/main.js"></script>
   </body>

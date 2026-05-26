@@ -6,9 +6,12 @@
   "nav": {
     "services": "Leistungen",
     "work": "Projekte",
+    "about": "Über uns",
     "why": "Warum wir",
     "process": "Ablauf",
-    "cta": "Angebot anfordern"
+    "cta": "Angebot anfordern",
+    "menuOpen": "Menü öffnen",
+    "menuClose": "Menü schließen"
   },
   "hero": {
     "eyebrow": "Luftaufnahmen · Menorca",
@@ -18,7 +21,8 @@
     "ctaSecondary": "Projekte ansehen",
     "trust1": "Lizenzierte & versicherte Piloten",
     "trust2": "Kinoreife 4K-Aufnahmen",
-    "trust3": "Schnelle Lieferung"
+    "trust3": "Schnelle Lieferung",
+    "showreel": "Showreel ansehen"
   },
   "services": {
     "eyebrow": "Was wir tun",
@@ -109,6 +113,40 @@
         "Sonstiges"
       ]
     }
+  },
+  "about": {
+    "eyebrow": "Über uns",
+    "title": "Arnaud, Ihr Drohnenpilot auf Menorca.",
+    "p1": "8 Drones Menorca ist Arnaud — zertifizierter Drohnenpilot, ansässig auf der Insel. Von Immobilien und Hotels über Hochzeiten und Events bis zu Urlaubsfilmen fängt er Menorca mit filmischem Blick und persönlichem Einsatz ein.",
+    "p2": "Jedes Projekt wird sorgfältig geplant, gefilmt, geschnitten und publikationsfertig geliefert. Klare Kommunikation, kurze Lieferzeiten und Aufnahmen, auf die Sie stolz sein werden.",
+    "points": [
+      "Zertifizierter & versicherter Pilot",
+      "Ansässig auf Menorca",
+      "Verfügbar auf der ganzen Insel und darüber hinaus"
+    ]
+  },
+  "stats": {
+    "items": [
+      { "value": "20+", "label": "Realisierte Luftaufnahmen-Projekte" },
+      { "value": "24h", "label": "Übliche Lieferzeit" },
+      { "value": "100%", "label": "Lizenziert & versichert" },
+      { "value": "4K", "label": "Aufnahmen in Kinoqualität" }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Referenzen",
+    "title": "Was unsere Kunden sagen.",
+    "items": [
+      { "quote": "Ein absolut tadelloser und professioneller Service. Wir ließen drei Häuser filmen und das Ergebnis übertraf unsere Erwartungen – beeindruckende Bildqualität, dynamischer und moderner Schnitt. Arnaud ist ein zertifizierter Pilot, der jede Immobilie perfekt in Szene setzt.", "name": "Escapada Menorca Conciergerie", "role": "Immobilien-Concierge · Menorca" },
+      { "quote": "Wir haben 8 Drones Menorca für unsere Hochzeit engagiert – das Ergebnis übertraf unsere Erwartungen. Fotos und Videos in toller Qualität, und die Zusammenarbeit mit Arnaud war angenehm, aufmerksam und flexibel. Sehr zu empfehlen!", "name": "Mathieu Gregori", "role": "Hochzeit · Menorca" },
+      { "quote": "Eine herausragende Arbeit! Die Drohnenaufnahmen haben unseren Urlaub auf Menorca veredelt – dynamisch, elegant und sehr bewegend, wie ein professioneller Film. Ein erstklassiger Service.", "name": "Karim Snider", "role": "Urlaub auf Menorca" }
+    ]
+  },
+  "clients": {
+    "title": "Vertraut von Profis auf ganz Menorca"
+  },
+  "common": {
+    "close": "Schließen"
   },
   "footer": {
     "tagline": "Luftfotografie & -video · Menorca, Spanien",

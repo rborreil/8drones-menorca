@@ -47,6 +47,12 @@ URLs : `/` (EN, défaut), `/es/`, `/fr/`, `/de/` — chacune avec ses propres `<
 > La génération échoue avec un message clair si une clé de traduction manque (pas de `{{…}}` publié par erreur).
 > Les URLs de prod (`canonical`/`hreflang`) sont définies par `SITE_URL` dans `scripts/generate.mjs`.
 
+## ⚠️ Indexation / mise en prod
+
+Tant que le site est en **staging sur GitHub Pages**, `SITE_INDEXABLE = false` dans `scripts/generate.mjs` → toutes les pages portent `noindex` (Google ne l'indexe pas, **pas de conflit SEO** avec le site actuellement en ligne). Chaque build l'affiche en avertissement.
+
+**Le jour de la migration sur le domaine de prod** : passer `SITE_INDEXABLE = true`, vérifier `SITE_URL`, et brancher le domaine. (SEO complet — sitemap multilingue, données structurées, pages dédiées — à activer à ce moment-là.)
+
 ## Médias
 
 Le site est habillé avec des **visuels stock libres de droits (Pexels — usage libre, sans attribution)** servant de placeholders premium :
@@ -59,9 +65,14 @@ Le site est habillé avec des **visuels stock libres de droits (Pexels — usage
 ## À personnaliser avant mise en ligne
 
 - [ ] Remplacer les visuels stock par les **réalisations réelles** du client (mêmes noms de fichiers).
+- [ ] **Showreel** : le bouton « Watch showreel » du hero rejoue la vidéo du hero. Pour le vrai showreel, remplacer `public/video/hero.mp4` (ou adapter le `data-showreel` dans `main.js` pour pointer une autre source).
+- [x] **Témoignages** (`testimonials.items`) = **vrais avis Google** (Escapada Menorca, M. Gregori, K. Snider), traduits dans les 4 langues. En ajouter/changer = éditer les JSON.
+- [ ] **Stats** (`stats.items`) : « 20+ projets » (réel) ; « 24h / 100% / 4K » à **confirmer** ou retirer.
+- [ ] **Logos clients** (section `#trust`) = placeholders « Client 1…5 » → remplacer par les vrais logos.
 - [ ] Connecter le **formulaire** : remplacer `action="https://formspree.io/f/your-id"` par un vrai endpoint (Formspree, Netlify Forms, ou backend).
 - [ ] Vérifier/confirmer les mentions de **réassurance** (licence AESA, assurance, délais) — ne pas afficher de garanties non réelles.
 - [x] `favicon.svg`, `robots.txt`, `sitemap.xml`, Open Graph + image — en place dans `public/`.
+- [x] **Réseaux sociaux** (footer) : Instagram, Facebook, YouTube réels câblés.
 
 ## Évolutions prévues (plan)
 

@@ -14,6 +14,16 @@ const SITE_URL = "https://www.8drones-menorca.com";
 // Chemin de deploiement (GitHub Pages projet). Doit matcher `base` dans vite.config.js.
 const BASE = "/8drones-menorca/";
 
+// ⚠️ INDEXATION GOOGLE
+// false = staging GitHub Pages : on bloque l'indexation pour ne PAS interferer
+//         avec le site actuellement en ligne (pas de duplicate content).
+// PASSER A true UNIQUEMENT le jour de la migration sur le domaine de prod,
+// sinon le site de prod ne sera jamais indexe.
+const SITE_INDEXABLE = false;
+const robotsMeta = SITE_INDEXABLE
+  ? ""
+  : '<meta name="robots" content="noindex, nofollow" />';
+
 const locales = [
   { code: "en", short: "EN", label: "English",  dir: "",    ogLocale: "en_US" },
   { code: "es", short: "ES", label: "Español",  dir: "es/", ogLocale: "es_ES" },
@@ -34,6 +44,12 @@ const hreflang = [
   ),
   `    <link rel="alternate" hreflang="x-default" href="${SITE_URL}/" />`,
 ].join("\n");
+
+if (!SITE_INDEXABLE) {
+  console.warn(
+    "[i18n] ⚠️  noindex ACTIF (staging). Repasser SITE_INDEXABLE=true apres la migration prod."
+  );
+}
 
 for (const loc of locales) {
   const dict = JSON.parse(
@@ -57,6 +73,7 @@ for (const loc of locales) {
     .replaceAll("{{ogLocale}}", loc.ogLocale)
     .replaceAll("{{canonical}}", canonical)
     .replaceAll("{{siteUrl}}", SITE_URL)
+    .replaceAll("{{robots}}", robotsMeta)
     .replaceAll("{{hreflang}}", hreflang)
     .replaceAll("{{langSwitcherDesktop}}", switcher("text-sm"))
     .replaceAll("{{langSwitcherMobile}}", switcher("text-base"));

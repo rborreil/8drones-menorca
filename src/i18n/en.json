@@ -6,9 +6,12 @@
   "nav": {
     "services": "Services",
     "work": "Work",
+    "about": "About",
     "why": "Why us",
     "process": "Process",
-    "cta": "Request a quote"
+    "cta": "Request a quote",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu"
   },
   "hero": {
     "eyebrow": "Aerial visuals · Menorca",
@@ -18,7 +21,8 @@
     "ctaSecondary": "See our work",
     "trust1": "Licensed & insured pilots",
     "trust2": "Cinematic 4K footage",
-    "trust3": "Fast delivery"
+    "trust3": "Fast delivery",
+    "showreel": "Watch showreel"
   },
   "services": {
     "eyebrow": "What we do",
@@ -109,6 +113,40 @@
         "Other"
       ]
     }
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Meet Arnaud, your drone pilot in Menorca.",
+    "p1": "8 Drones Menorca is Arnaud — a certified drone pilot based on the island. From real estate and hotels to weddings, events and holidays, he captures Menorca with a cinematic eye and a personal, hands-on approach.",
+    "p2": "Every project is planned, filmed, edited and delivered with care — ready to publish. Clear communication, fast turnaround, and footage you'll be proud to share.",
+    "points": [
+      "Certified & insured pilot",
+      "Based in Menorca",
+      "Available across the island & beyond"
+    ]
+  },
+  "stats": {
+    "items": [
+      { "value": "20+", "label": "Aerial projects delivered" },
+      { "value": "24h", "label": "Typical delivery time" },
+      { "value": "100%", "label": "Licensed & insured" },
+      { "value": "4K", "label": "Cinema-grade footage" }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "What our clients say.",
+    "items": [
+      { "quote": "Absolutely flawless and professional. We had three properties filmed and the result exceeded our expectations — stunning image quality and modern, dynamic editing. Arnaud is a certified pilot who knows how to showcase every property.", "name": "Escapada Menorca Conciergerie", "role": "Property concierge · Menorca" },
+      { "quote": "We hired 8 Drones Menorca to capture our wedding and it exceeded our expectations. The photos and videos are superb, and Arnaud is a real pleasure to work with — attentive and accommodating. Highly recommended!", "name": "Mathieu Gregori", "role": "Wedding · Menorca" },
+      { "quote": "Remarkable work! The drone footage elevated our holiday in Menorca far beyond what we imagined — dynamic, elegant and genuinely moving, worthy of a professional film. A premium service.", "name": "Karim Snider", "role": "Holiday in Menorca" }
+    ]
+  },
+  "clients": {
+    "title": "Trusted by professionals across Menorca"
+  },
+  "common": {
+    "close": "Close"
   },
   "footer": {
     "tagline": "Aerial photography & video · Menorca, Spain",
