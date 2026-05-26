@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Drohnen-Foto & -Video auf Menorca | 8 Drones Menorca",
+    "description": "Professionelle Drohnenfotografie und -videos auf Menorca für Immobilien, Hotels, Villen, Hochzeiten und Events. Zertifizierte Piloten, kinoreife 4K-Aufnahmen, schnelle Lieferung."
+  },
+  "nav": {
+    "services": "Leistungen",
+    "work": "Projekte",
+    "why": "Warum wir",
+    "process": "Ablauf",
+    "cta": "Angebot anfordern"
+  },
+  "hero": {
+    "eyebrow": "Luftaufnahmen · Menorca",
+    "title": "Menorca von oben – in filmreifer Qualität.",
+    "sub": "Professionelle Drohnen-Foto und -Video für <span class=\"text-sand\">Immobilien, Hotels, Villen, Hochzeiten</span> und Events auf der ganzen Insel — gefilmt, bearbeitet und publikationsfertig geliefert.",
+    "ctaPrimary": "Angebot anfordern",
+    "ctaSecondary": "Projekte ansehen",
+    "trust1": "Lizenzierte & versicherte Piloten",
+    "trust2": "Kinoreife 4K-Aufnahmen",
+    "trust3": "Schnelle Lieferung"
+  },
+  "services": {
+    "eyebrow": "Was wir tun",
+    "title": "Luftaufnahmen, die verkaufen, vermieten und füllen.",
+    "subtitle": "Maßgeschneiderter Drohnen-Content für jedes Projekt auf Menorca.",
+    "realEstate": {
+      "title": "Immobilien",
+      "desc": "Zeigen Sie jede Immobilie von ihrer besten Seite – Grundstück, Umgebung und Meerblick, die schneller verkaufen.",
+      "alt": "Luftaufnahme der Küste von Menorca per Drohne für das Immobilienmarketing"
+    },
+    "hotels": {
+      "title": "Hotels & Resorts",
+      "desc": "Werbevideos, die Direktbuchungen steigern und Ihre Marke aufwerten.",
+      "alt": "Drohnen-Luftaufnahmen eines Hotelresorts mit Pools auf Menorca"
+    },
+    "villas": {
+      "title": "Villen & Ferienvermietung",
+      "desc": "Heben Sie sich auf Buchungsplattformen ab – mit Bildern, die Premiumpreise rechtfertigen.",
+      "alt": "Drohnen-Luftaufnahme einer privaten Villa mit Pool auf Menorca"
+    },
+    "weddings": {
+      "title": "Hochzeiten & Events",
+      "desc": "Unvergessliche Luftmomente Ihrer Feier, dezent eingefangen.",
+      "alt": "Drohnen-Luftaufnahme einer Location am Meer auf Menorca für Hochzeiten und Events"
+    },
+    "tourism": {
+      "title": "Tourismus & Promo",
+      "desc": "Content, der in Social Media und im Destinationsmarketing auffällt.",
+      "alt": "Drohnen-Luftaufnahme der türkisen Küste von Menorca für Tourismus-Content"
+    },
+    "infrastructure": {
+      "title": "Infrastruktur",
+      "desc": "Inspektionen, Vermessungen und Baufortschritts-Dokumentation aus sicherer Luftperspektive.",
+      "alt": "Drohnen-Inspektionsaufnahme einer Immobilie und ihres Grundstücks auf Menorca"
+    }
+  },
+  "work": {
+    "eyebrow": "Ausgewählte Projekte",
+    "title": "Ein Blick auf Menorca aus der Luft.",
+    "cta": "Projekt starten",
+    "alts": [
+      "Drohnenfoto von Meeresklippen auf Menorca",
+      "Luftaufnahme einer Villa mit Pool auf Menorca",
+      "Luftaufnahme der türkisen Küste von Menorca",
+      "Luftaufnahme von Palmen und Grundstücken auf Menorca",
+      "Luftaufnahmen eines Resorts mit Pools auf Menorca",
+      "Luftaufnahme eines Resorts am Meer auf Menorca",
+      "Luftaufnahme eines Resorts und seines Grundstücks auf Menorca"
+    ]
+  },
+  "why": {
+    "eyebrow": "Warum 8 Drones",
+    "title": "Lokale Expertise, der Sie vertrauen können.",
+    "items": [
+      { "kpi": "Legal", "title": "Lizenziert & versichert", "desc": "Zertifizierte Piloten, die nach spanischem Recht (AESA) fliegen – vollständig versichert." },
+      { "kpi": "Schnell", "title": "Kurze Lieferzeiten", "desc": "Geschnittene und farbkorrigierte Aufnahmen, publikationsfertig geliefert." },
+      { "kpi": "Lokal", "title": "Wir kennen die Insel", "desc": "Bestes Licht, beste Spots und das richtige Timing in jedem Winkel Menorcas." },
+      { "kpi": "4K", "title": "Kinoqualität", "desc": "Professionelle Technik und ein geschultes Auge für Content, der wirkt." }
+    ]
+  },
+  "process": {
+    "eyebrow": "So läuft es ab",
+    "title": "Einfach, vom Briefing bis zur Lieferung.",
+    "steps": [
+      { "title": "Briefing", "desc": "Nennen Sie uns Ziel, Ort und Termin. Wir beraten zum besten Vorgehen." },
+      { "title": "Flug", "desc": "Wir filmen zum richtigen Zeitpunkt für bestes Licht und beste Bedingungen." },
+      { "title": "Schnitt", "desc": "Professioneller Schnitt und Farbkorrektur, abgestimmt auf Ihre Kanäle." },
+      { "title": "Lieferung", "desc": "Fertige Dateien, publikationsbereit für Web, Social Media und Inserate." }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Planen wir Ihren Luftdreh.",
+    "subtitle": "Erzählen Sie uns von Ihrem Projekt – wir melden uns mit einem Angebot, in der Regel innerhalb von 24 Stunden.",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "project": "Projektart",
+      "message": "Nachricht",
+      "button": "Anfrage senden",
+      "projectOptions": [
+        "Immobilien",
+        "Hotel / Resort",
+        "Villa / Vermietung",
+        "Hochzeit / Event",
+        "Tourismus / Promo",
+        "Infrastruktur",
+        "Sonstiges"
+      ]
+    }
+  },
+  "footer": {
+    "tagline": "Luftfotografie & -video · Menorca, Spanien",
+    "contact": "Kontakt",
+    "terms": "Impressum",
+    "rights": "Alle Rechte vorbehalten."
+  }
+}

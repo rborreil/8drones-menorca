@@ -23,12 +23,29 @@ npm run preview
 ## Structure
 
 ```
-index.html        → page d'accueil (hero, services, portfolio, why, process, contact)
 src/
+  template.html   → SOURCE de la page (un seul template, design)
+  i18n/           → contenu traduit : en.json, es.json, fr.json, de.json
   main.js         → menu mobile, header au scroll, reveal, JS minimal
   style.css       → Tailwind + composants (.btn, .service-card, .eyebrow…)
+scripts/
+  generate.mjs    → génère index.html (EN) + es/ fr/ de/ depuis template + i18n
 tailwind.config.js → palette (ink/sand/sea/gold), typographies, design tokens
+vite.config.js    → base GitHub Pages + build multipage (4 langues)
 ```
+
+> Les fichiers `index.html`, `es/`, `fr/`, `de/` sont **générés** (gitignorés). On ne les édite jamais à la main.
+
+## Multilingue (EN · ES · FR · DE)
+
+URLs : `/` (EN, défaut), `/es/`, `/fr/`, `/de/` — chacune avec ses propres `<title>`, meta, `lang` et balises `hreflang` (bon pour le SEO). Sélecteur de langue dans le header (desktop + mobile).
+
+**Modifier un texte** → éditer le `src/i18n/<langue>.json` concerné, puis `npm run dev` / `npm run build`.
+**Modifier le design/la structure** → éditer `src/template.html` (placeholders `{{clé}}`).
+**Ajouter une langue** → créer `src/i18n/<code>.json` (mêmes clés) et ajouter la locale dans `scripts/generate.mjs` (`locales`) + l'entrée dans `vite.config.js`.
+
+> La génération échoue avec un message clair si une clé de traduction manque (pas de `{{…}}` publié par erreur).
+> Les URLs de prod (`canonical`/`hreflang`) sont définies par `SITE_URL` dans `scripts/generate.mjs`.
 
 ## Médias
 
@@ -49,7 +66,7 @@ Le site est habillé avec des **visuels stock libres de droits (Pexels — usage
 ## Évolutions prévues (plan)
 
 1. Pages SEO dédiées : `/real-estate-drone-menorca`, `/hotels-resorts`, `/villa-rental-video`, `/wedding-events`.
-2. Multilingue : EN (actuel) → ES, puis DE/FR selon la clientèle.
+2. ~~Multilingue EN/ES/FR/DE~~ — ✅ en place (traductions à faire relire par un natif).
 3. Google Business Profile + données structurées enrichies.
 4. Témoignages clients + logos partenaires.
 ```

@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Drone Photography & Video in Menorca | 8 Drones Menorca",
+    "description": "Professional drone photography and video in Menorca for real estate, hotels, villas, weddings and events. Licensed pilots, cinematic 4K footage, fast delivery."
+  },
+  "nav": {
+    "services": "Services",
+    "work": "Work",
+    "why": "Why us",
+    "process": "Process",
+    "cta": "Request a quote"
+  },
+  "hero": {
+    "eyebrow": "Aerial visuals · Menorca",
+    "title": "Menorca from above, in cinematic detail.",
+    "sub": "Professional drone photography and video for <span class=\"text-sand\">real estate, hotels, villas, weddings</span> and events across the island — shot, edited and delivered ready to publish.",
+    "ctaPrimary": "Request a quote",
+    "ctaSecondary": "See our work",
+    "trust1": "Licensed & insured pilots",
+    "trust2": "Cinematic 4K footage",
+    "trust3": "Fast delivery"
+  },
+  "services": {
+    "eyebrow": "What we do",
+    "title": "Aerial visuals built to sell, rent and fill.",
+    "subtitle": "Tailored drone content for every kind of project in Menorca.",
+    "realEstate": {
+      "title": "Real Estate",
+      "desc": "Show every property at its best — plot, surroundings and sea views that close sales faster.",
+      "alt": "Aerial drone view of the Menorca coastline for real estate marketing"
+    },
+    "hotels": {
+      "title": "Hotels & Resorts",
+      "desc": "Promotional footage that drives direct bookings and elevates your brand.",
+      "alt": "Aerial drone footage of a hotel resort with pools in Menorca"
+    },
+    "villas": {
+      "title": "Villas & Rentals",
+      "desc": "Stand out on booking platforms with visuals that justify premium rates.",
+      "alt": "Aerial drone view of a private villa with swimming pool in Menorca"
+    },
+    "weddings": {
+      "title": "Weddings & Events",
+      "desc": "Unforgettable aerial moments of your celebration, captured discreetly.",
+      "alt": "Aerial drone shot of a beachfront venue in Menorca for weddings and events"
+    },
+    "tourism": {
+      "title": "Tourism & Promo",
+      "desc": "Scroll-stopping content for social media and destination marketing.",
+      "alt": "Aerial drone view of turquoise Menorca coastline for tourism content"
+    },
+    "infrastructure": {
+      "title": "Infrastructure",
+      "desc": "Inspections, surveys and progress documentation from a safe aerial view.",
+      "alt": "Aerial drone inspection view of a property and grounds in Menorca"
+    }
+  },
+  "work": {
+    "eyebrow": "Selected work",
+    "title": "A glimpse of Menorca from the sky.",
+    "cta": "Start your project",
+    "alts": [
+      "Drone photo of sea cliffs in Menorca",
+      "Aerial photo of a villa with pool in Menorca",
+      "Aerial view of turquoise coastline in Menorca",
+      "Aerial photo of palm trees and grounds in Menorca",
+      "Aerial footage of a resort with pools in Menorca",
+      "Aerial shot of a beachfront resort in Menorca",
+      "Aerial view of a resort and grounds in Menorca"
+    ]
+  },
+  "why": {
+    "eyebrow": "Why 8 Drones",
+    "title": "Local expertise you can trust.",
+    "items": [
+      { "kpi": "Licensed", "title": "Legal & insured", "desc": "Certified pilots flying within Spanish (AESA) regulations, fully insured." },
+      { "kpi": "Fast", "title": "Quick turnaround", "desc": "Edited, color-graded footage delivered ready to publish." },
+      { "kpi": "Local", "title": "We know the island", "desc": "The best light, spots and timing across every corner of Menorca." },
+      { "kpi": "4K", "title": "Cinematic quality", "desc": "Professional gear and a sharp eye for content that performs." }
+    ]
+  },
+  "process": {
+    "eyebrow": "How it works",
+    "title": "Simple, from brief to delivery.",
+    "steps": [
+      { "title": "Brief", "desc": "Tell us your goal, location and deadline. We advise on the best approach." },
+      { "title": "Flight", "desc": "We shoot at the right time for the best light and conditions." },
+      { "title": "Edit", "desc": "Professional editing and color grading tailored to your channels." },
+      { "title": "Delivery", "desc": "Final files ready to publish across web, social and listings." }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "title": "Let's plan your aerial shoot.",
+    "subtitle": "Tell us about your project and we'll get back to you with a quote, usually within 24 hours.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "project": "Project type",
+      "message": "Message",
+      "button": "Send request",
+      "projectOptions": [
+        "Real Estate",
+        "Hotel / Resort",
+        "Villa / Rental",
+        "Wedding / Event",
+        "Tourism / Promo",
+        "Infrastructure",
+        "Other"
+      ]
+    }
+  },
+  "footer": {
+    "tagline": "Aerial photography & video · Menorca, Spain",
+    "contact": "Contact",
+    "terms": "Terms",
+    "rights": "All rights reserved."
+  }
+}

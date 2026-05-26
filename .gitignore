@@ -3,3 +3,9 @@ dist
 .DS_Store
 *.local
 .vite
+
+# Pages generees par scripts/generate.mjs (source = src/template.html + src/i18n/*.json)
+/index.html
+/es/
+/fr/
+/de/

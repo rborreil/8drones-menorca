@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Photo et vidéo par drone à Minorque | 8 Drones Menorca",
+    "description": "Photo et vidéo par drone professionnelles à Minorque pour l'immobilier, les hôtels, les villas, les mariages et les événements. Pilotes certifiés, images 4K cinématographiques, livraison rapide."
+  },
+  "nav": {
+    "services": "Services",
+    "work": "Réalisations",
+    "why": "Pourquoi nous",
+    "process": "Méthode",
+    "cta": "Demander un devis"
+  },
+  "hero": {
+    "eyebrow": "Images aériennes · Minorque",
+    "title": "Minorque vue du ciel, dans un rendu cinématographique.",
+    "sub": "Photo et vidéo par drone professionnelles pour <span class=\"text-sand\">l'immobilier, les hôtels, les villas, les mariages</span> et les événements dans toute l'île — tournées, montées et livrées prêtes à publier.",
+    "ctaPrimary": "Demander un devis",
+    "ctaSecondary": "Voir nos réalisations",
+    "trust1": "Pilotes certifiés et assurés",
+    "trust2": "Images 4K cinématographiques",
+    "trust3": "Livraison rapide"
+  },
+  "services": {
+    "eyebrow": "Ce que nous faisons",
+    "title": "Des images aériennes qui font vendre, louer et remplir.",
+    "subtitle": "Du contenu drone sur mesure pour chaque type de projet à Minorque.",
+    "realEstate": {
+      "title": "Immobilier",
+      "desc": "Mettez chaque bien en valeur : terrain, environnement et vues sur mer qui accélèrent les ventes.",
+      "alt": "Vue aérienne par drone du littoral de Minorque pour le marketing immobilier"
+    },
+    "hotels": {
+      "title": "Hôtels & resorts",
+      "desc": "Des vidéos promotionnelles qui boostent les réservations directes et valorisent votre marque.",
+      "alt": "Images aériennes par drone d'un hôtel resort avec piscines à Minorque"
+    },
+    "villas": {
+      "title": "Villas & locations",
+      "desc": "Démarquez-vous sur les plateformes de réservation avec des visuels qui justifient des tarifs premium.",
+      "alt": "Vue aérienne par drone d'une villa privée avec piscine à Minorque"
+    },
+    "weddings": {
+      "title": "Mariages & événements",
+      "desc": "Des moments aériens inoubliables de votre célébration, captés avec discrétion.",
+      "alt": "Prise de vue aérienne par drone d'un lieu en bord de mer à Minorque pour mariages et événements"
+    },
+    "tourism": {
+      "title": "Tourisme & promo",
+      "desc": "Du contenu qui capte l'attention sur les réseaux sociaux et en marketing de destination.",
+      "alt": "Vue aérienne par drone du littoral turquoise de Minorque pour le contenu touristique"
+    },
+    "infrastructure": {
+      "title": "Infrastructure",
+      "desc": "Inspections, relevés et suivi de chantier depuis une vue aérienne sécurisée.",
+      "alt": "Vue aérienne d'inspection par drone d'une propriété et de son terrain à Minorque"
+    }
+  },
+  "work": {
+    "eyebrow": "Réalisations sélectionnées",
+    "title": "Un aperçu de Minorque vue du ciel.",
+    "cta": "Démarrer votre projet",
+    "alts": [
+      "Photo par drone de falaises maritimes à Minorque",
+      "Photo aérienne d'une villa avec piscine à Minorque",
+      "Vue aérienne du littoral turquoise de Minorque",
+      "Photo aérienne de palmiers et de terrains à Minorque",
+      "Images aériennes d'un resort avec piscines à Minorque",
+      "Prise de vue aérienne d'un resort en bord de mer à Minorque",
+      "Vue aérienne d'un resort et de ses terrains à Minorque"
+    ]
+  },
+  "why": {
+    "eyebrow": "Pourquoi 8 Drones",
+    "title": "Une expertise locale de confiance.",
+    "items": [
+      { "kpi": "Légal", "title": "Certifié & assuré", "desc": "Pilotes certifiés volant dans le cadre de la réglementation espagnole (AESA), entièrement assurés." },
+      { "kpi": "Rapide", "title": "Délais courts", "desc": "Images montées et étalonnées, livrées prêtes à publier." },
+      { "kpi": "Local", "title": "Nous connaissons l'île", "desc": "La meilleure lumière, les meilleurs spots et le bon timing dans chaque coin de Minorque." },
+      { "kpi": "4K", "title": "Qualité cinéma", "desc": "Matériel professionnel et un œil aiguisé pour un contenu performant." }
+    ]
+  },
+  "process": {
+    "eyebrow": "Comment ça marche",
+    "title": "Simple, du brief à la livraison.",
+    "steps": [
+      { "title": "Brief", "desc": "Dites-nous votre objectif, le lieu et l'échéance. Nous conseillons la meilleure approche." },
+      { "title": "Vol", "desc": "Nous tournons au bon moment pour la meilleure lumière et les meilleures conditions." },
+      { "title": "Montage", "desc": "Montage professionnel et étalonnage adaptés à vos canaux." },
+      { "title": "Livraison", "desc": "Fichiers finaux prêts à publier sur le web, les réseaux et les annonces." }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Planifions votre prise de vue aérienne.",
+    "subtitle": "Parlez-nous de votre projet et nous revenons vers vous avec un devis, généralement sous 24 heures.",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "project": "Type de projet",
+      "message": "Message",
+      "button": "Envoyer la demande",
+      "projectOptions": [
+        "Immobilier",
+        "Hôtel / Resort",
+        "Villa / Location",
+        "Mariage / Événement",
+        "Tourisme / Promo",
+        "Infrastructure",
+        "Autre"
+      ]
+    }
+  },
+  "footer": {
+    "tagline": "Photo et vidéo aérienne · Minorque, Espagne",
+    "contact": "Contact",
+    "terms": "Mentions légales",
+    "rights": "Tous droits réservés."
+  }
+}
